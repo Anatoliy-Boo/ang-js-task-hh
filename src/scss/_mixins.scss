@@ -1,0 +1,45 @@
+/**
+ * Mixins
+*/
+
+/* Helpers */
+// @mixin markup {
+
+// }
+
+@mixin reset-in {
+  padding: 0;
+}
+
+@mixin reset-out {
+  margin: 0;
+}
+
+@mixin reset-space {
+  @include reset-in;
+  @include reset-out;
+}
+
+@mixin base-text {
+  font-family: "Inter", "Roboto", "Arial", "Tahoma", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: $main;
+  font-style: normal;
+}
+
+@mixin reset-list {
+  @include reset-space;
+
+  list-style: none;
+}
+
+/* Mixins */
+// @mixin clearfix {
+//   &::after {
+//     clear: both;
+//     content: '';
+//     display: table;
+//   }
+// }

@@ -1,0 +1,9 @@
+.cd-toast {
+  transition: all .2s ease-in .2s;
+  opacity: 0;
+}
+
+.cd-toast.appear {
+  z-index: 500;
+  opacity: 1;
+}

@@ -1,0 +1,28 @@
+.dashboard-wrp {
+  margin: 0 auto;
+  padding: 0 16px;
+
+  h1 {
+    margin: 24px 0;
+
+    line-height: 48px;
+  }
+}
+
+.dashboard-el {
+  display: flex;
+  justify-content: flex-start;
+
+  pre {
+    margin: 0;
+
+    font-family: "Inter", "Roboto", "Arial", "Tahoma", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    color: rgb(87, 87, 87);
+    font-style: normal;
+
+    transition: all .1s ease-in .1s;
+  }
+}

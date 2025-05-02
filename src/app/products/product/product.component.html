@@ -1,0 +1,193 @@
+<div
+  *ngIf="product; else elseBlock"
+  class="entity"
+>
+  <div class="entity__hero">
+    <div class="entity__toolbar">
+      <a
+        class="entity__btn btn-icon btn-icon--close"
+        [routerLink]="['/products']"
+        title="Close goods card"
+      ></a>
+      <button
+        class="entity__btn btn-icon btn-icon--favorite"
+        title="Add goods into favorite list"
+      ></button>
+    </div>
+
+    <img
+      class="entity__hero-view"
+      src="assets/goods_1.png"
+      alt="Goods preview"
+      width="360"
+      height="300"
+    >
+
+    <div class="entity__badge" title="Goods badge"></div>
+
+    <div class="entity__hero-paginator hero-paginator">
+      <button class="hero-paginator-btn hero-paginator-btn--appear" title="Set good preview"></button>
+      <button class="hero-paginator-btn" title="Set good preview 2"></button>
+      <button class="hero-paginator-btn" title="Set good preview 3"></button>
+      <button class="hero-paginator-btn" title="Set good preview 4"></button>
+      <button class="hero-paginator-btn" title="Set good preview 5"></button>
+    </div>
+  </div>
+
+  <div class="entity__recital">
+    <h1 class="entity__label">{{ product.name }}</h1>
+
+    <img
+      class="entity__brand-logo"
+      src="assets/brand_1.png"
+      alt="Goods brand logo"
+      width="164"
+      height="32"
+    >
+
+    <ul class="entity__sup-info">
+      <li class="entity__sup-info-item">
+        <span class="entity__sup-info entity__sup-info-label">Артикул:&ensp;&ensp;&ensp;</span>
+        <span class="entity__sup-info entity__sup-inf0-value">ФТ-305.174</span>
+      </li>
+      <li class="entity__sup-info-item">
+        <span class="entity__sup-info entity__sup-info-label">Код поставщика:&ensp;&ensp;&ensp;</span>
+        <span class="entity__sup-info entity__sup-inf0-value">00000030692</span>
+      </li>
+    </ul>
+
+    <div class="entity__fin-info">
+      <p class="entity__price"><span>15 341,00 </span>&nbsp;₽</p>
+      <div class="entity__currency-view"></div>
+      <p class="entity__currency-bonus">+ 20,79 баллов</p>
+    </div>
+  </div>
+
+  <ul class="entity__stock-list cd-list">
+    <li class="entity__stock-item stock">
+      <div class="stock__location">
+        <p class="stock__name"><span>Москва</span>&nbsp;<i></i></p>
+
+        <button
+          class="cd-btn stock__toggle-btn"
+          type="button"
+          title="Добавить в корзину"
+        >
+          <i class="cd__btn-icon cd__btn-icon--cap"></i><span>В корзину</span><i class="cd__btn-icon cd__btn-icon--trail"></i>
+        </button>
+      </div>
+
+      <ul class="stock__info-list cd-list">
+        <li class="stock__info-item">
+          <p class="stock__value-info">
+            <span>В наличии:</span>
+            <span class="stock__value-info stock__value-info--enabled"> 2 шт.</span>
+          </p>
+          <p class="stock__value-info">
+            <span>Дата поставки:</span>
+            <span class="stock__value-info stock__value-info--rich"> 22.04.2025</span>
+          </p>
+        </li>
+      </ul>
+    </li>
+
+    <li class="entity__stock-item stock">
+      <div class="stock__location">
+        <p class="stock__name"><span>Ростов</span>&nbsp;<i></i></p>
+        <!-- <button class="cd-btn stock__toggle-btn stock__toggle-btn--counter">
+          <i class="cd__btn-icon cd__btn-icon--cap"></i><span>1 шт.</span><i class="cd__btn-icon cd__btn-icon--trail"></i>
+        </button> -->
+
+        <div class="cd-multiple-button">
+          <button
+            class="btn-group btn-group--head"
+            type="button"
+            title="Изменить кол-во единиц"
+          ></button>
+          <div class="btn-lable">1 шт.</div>
+          <button
+            class="btn-group btn-group--trail"
+            type="button"
+            title="Изменить кол-во единиц"
+          ></button>
+        </div>
+      </div>
+
+      <ul class="stock__info-list cd-list">
+        <li class="stock__info-item">
+          <p class="stock__value-info">
+            <span>В наличии:</span>
+            <span class="stock__value-info stock__value-info--enabled"> 2 шт.</span>
+          </p>
+          <p class="stock__value-info">
+            <span>Дата поставки:</span>
+            <span class="stock__value-info"> 29.04.2025</span>
+          </p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="entity__desc-wrp">
+    <ul class="entity__pills">
+      <li class="entity__pill-handler"><button class="entity__pill" type="button" title="Перейти к подробностям">Описание</button></li>
+      <li class="entity__pill-handler"><button class="entity__pill entity__pill--ghost" type="button" title="Перейти к подробностям">Характеристики</button></li>
+      <!-- <li class="entity__pill-handler"><button class="entity__pill" type="button" title="Перейти к подробностям">Аналоги (1)</button></li>
+      <li class="entity__pill-handler"><button class="entity__pill" type="button" title="Перейти к подробностям">Сопутствующие (1)</button></li>
+      <li class="entity__pill-handler"><button class="entity__pill" type="button" title="Перейти к подробностям">Тех.документация (2)</button></li> -->
+    </ul>
+
+    <ul class="entity__desc-list">
+      <li class="entity__desc-item">
+        <div class="entity__desc-key">Тип TC</div>
+        <div class="entity__desc-value">грузовые автомобили, автобусы, сельхозтехника</div>
+      </li>
+      <li class="entity__desc-item">
+        <div class="entity__desc-key">Применяемость</div>
+        <div class="entity__desc-value">КАМАЗ, ЛИАЗ, CASE с&nbsp;дв. CUMMINS ISBe&sol; ISDe</div>
+      </li>
+      <li class="entity__desc-item">
+        <div class="entity__desc-key">Марка ТС</div>
+        <div class="entity__desc-value">КАМАЗ, ЛИАЗ, CASE</div>
+      </li>
+      <li class="entity__desc-item">
+        <div class="entity__desc-key">КроссКоды</div>
+        <div class="entity__desc-value">FC6206<br>WK950/3<br>110-16-008<br>6127<br>FF185М<br>1457434180<br>KC28<br>KF3041
+        </div>
+      </li>
+      <li class="entity__desc-item">
+        <div class="entity__desc-key">Состав комплекта</div>
+        <div class="entity__desc-value">Фильтр очистки топлива: 1 шт.</div>
+      </li>
+      <li class="entity__desc-item">
+        <div class="entity__desc-key">Модель двигателя</div>
+        <div class="entity__desc-value">Cummins ISD 6.7,<br>Cummins ISB 6.7</div>
+      </li>
+      <li class="entity__desc-item">
+        <div class="entity__desc-key">Марка двигателя</div>
+        <div class="entity__desc-value">Cummins Inc.</div>
+      </li>
+      <li class="entity__desc-item">
+        <div class="entity__desc-key">Доп. информация</div>
+        <div class="entity__desc-value">-</div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+  <div class="entity entity--fish">
+    <h1>Oops.. Something happened..</h1>
+    <br><br>
+    <p>
+      Try reloading the page, check later.<br>
+      You can contact support.
+    </p>
+    <p>
+      <a
+        class=""
+        routerLink="/products"
+      >Вернуться к списку продуктов &#9658;</a>
+    </p>
+  </div>
+</ng-template>

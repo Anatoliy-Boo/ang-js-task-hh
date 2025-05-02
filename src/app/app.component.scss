@@ -1,0 +1,79 @@
+.cd-app-nav__list {
+  box-sizing: border-box;
+  display: flex;
+  // justify-content: flex-start;
+  width: 100%;
+}
+
+.cd-app-nav__item {
+  box-sizing: border-box;
+  width: 66px;
+  height: 63px;
+}
+
+.cd-app-nav__link {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 63px;
+
+  font-family: "Nunito", "Inter", "Arial", "Tahoma", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #000;
+  font-style: normal;
+  text-align: center;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.cd-app-nav__icon {
+  position: relative;
+  top: -2px;
+
+  max-width: 66px;
+  height: 32px;
+  max-height: 32px;
+}
+
+.cd-app-nav__icon svg rect{
+  transition: all .2s ease-in .2s;
+}
+
+.cd-app-nav__section-name {
+  box-sizing: border-box;
+  padding: 0 4px;
+  max-width: 66px;
+  height: 16px;
+  max-height: 16px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+
+  transition: all .2s ease-in .1s;
+}
+
+.cd-app-header.appear {
+  // display: flex;
+}
+
+.cd-app-nav__link--active,
+.cd-app-nav__link:hover,
+.cd-app-nav__link:focus {
+
+  .cd-app-nav__section-name {
+    font-weight: bold;
+    color: rgb(7, 80, 149);
+  }
+
+  .cd-app-nav__icon svg rect{
+    fill: rgb(7, 80, 149) !important;
+  }
+}

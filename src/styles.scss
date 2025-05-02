@@ -1,0 +1,303 @@
+/* Variables */
+@import './scss/_vars.scss';
+
+/* Fonts */
+@import './scss/_fonts.scss';
+
+/* CSS print */
+@import './scss/_print.scss';
+
+/* Mixins, helpers etc */
+@import './scss/_mixins.scss';
+@import './scss/_helpers.scss';
+@import './scss/_normalize.scss';
+
+/* Vendor */
+
+/* Components */
+
+
+
+/* Base: begin */
+body {
+  @include reset-space;
+  @include base-text;
+
+  min-height: 100vh;
+
+  background-color: $secondary;
+  overflow: hidden;
+  overflow-y: scroll
+}
+
+a {
+	text-decoration: none;
+}
+/* Base: end */
+
+/* CD Html elements: begin */
+.cd-main {
+  flex-grow: 1;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid transparent;
+}
+
+.cd-app-header.appear + .cd-main {
+  margin-top: 63px;
+
+  border-top: 1px solid transparent;
+}
+
+.cd-section {
+  margin: 0 auto;
+
+  width: 100%;
+  min-width: 320px;
+  max-width: 754px;
+}
+
+.cd__section-wrp {
+
+}
+
+/* List elements (ul, ol, li) */
+.cd-list {
+  @include reset-list;
+}
+
+/* Button element */
+.cd-btn {
+  @include base-text;
+  padding: 4px 16px;
+  height: 32px;
+  border: 1px solid rgba($main, .4);
+  background-color: $secondary;
+  border-radius: 8px;
+  transition: all .1s ease-in .2s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba($main, .8);
+    background-color: rgba($secondary, .4)
+  }
+
+  &.cd-btn--simple {
+    box-sizing: border-box;
+    padding-top: 14px;
+    min-width: 140px;
+    height: 48px;
+
+    font-weight: 500;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      color: rgb(7, 80, 149);
+      border-color: rgb(7, 80, 149);
+      background-color: rgb(188, 221, 248);
+    }
+  }
+}
+
+.cd__btn-icon {
+  width: 24px;
+  height: 24px;
+
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+.cd-multiple-button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 32px;
+  width: 138px;
+  max-width: 138px;
+
+  font-family: "Inter", "Roboto", "Arial", "Tahoma", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  font-style: normal;
+  color: rgb(7, 80, 149);
+  background-color: #fff;
+
+  .btn-lable {
+    box-sizing: border-box;
+    padding-top: 6px;
+    padding-left: 7px;
+    width: 33%;
+    height: 32px;
+    border-top: 1px solid rgb(7, 80, 149);
+    border-bottom: 1px solid rgb(7, 80, 149);
+
+    text-align: center;
+    color: rgb(21, 21, 21);
+    cursor: auto;
+
+  }
+
+  .btn-group {
+    box-sizing: border-box;
+    display: flex;
+    padding: 0;
+    height: 32px;
+    width: 33%;
+    border: 1px solid rgb(7, 80, 149);
+
+    background-color: transparent;
+    background-position: 68% 50%;
+    background-repeat: no-repeat;
+    background-size: 24px;
+
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all .1s ease-in .2s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: rgb(188, 221, 248);
+      border-color: rgb(13 138 255);
+    }
+
+    &.btn-group--head {
+      border-right-width: 0;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      background-image: url('../public/assets/svg/icon_minus.svg');
+    }
+
+    &.btn-group--trail {
+      border-left-width: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      background-image: url('../public/assets/svg/icon_plus.svg');
+    }
+  }
+}
+
+/* Text (p, lable etc...)*/
+.cd-text {
+  @include reset-space;
+  @include base-text;
+}
+/* CD Html elements: end */
+
+
+/* Classes */
+.cd-shell {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cd-app-header__nav {
+  min-width: 320px;
+  max-width: 754px;
+  margin: 0 auto;
+}
+
+.cd-app-header {
+  z-index: 400;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+
+  width: 100%;
+  height: 63px;
+  border-top: 1px solid;
+  border-bottom-width: 0;
+  border-color: $decor;
+
+  background-color: $secondary;
+
+  .cd-app-nav__list {
+    justify-content: center;
+  }
+
+  .cd-app-nav__item.cd-app-nav__item--kit {
+    margin-left: 0;
+  }
+}
+
+.cd-app-header.appear {
+  top: 0;
+  border-top-width: 0;
+  border-bottom: 1px solid;
+  border-color: $decor;
+
+  .cd-app-nav__list {
+    justify-content: flex-start;
+  }
+
+  .cd-app-nav__item.cd-app-nav__item--kit {
+    margin-left: auto;
+  }
+}
+
+.product {
+  @include reset-in;
+  @include base-text;
+
+  margin-top: 8px;
+}
+
+/* Toast */
+.cd-toast {
+  box-sizing: border-box;
+  z-index: -1;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  padding: 12px;
+  width: 180px;
+  max-width: 180px;
+  min-width: 180px;
+  min-height: 120px;
+
+  background-color: rgb(241 241 241);
+  box-shadow: 0px 0px 14px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+
+  h2 {
+    margin: 8px 0;
+    font-family: "Inter", "Roboto", "Arial", "Tahoma", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: bold;
+    color: rgb(80, 185, 70);
+  }
+
+  .cd-text {
+    font-family: "Inter", "Roboto", "Arial", "Tahoma", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    font-style: normal;
+    color: rgb(33, 33, 33);
+  }
+
+  .cd-toast__btn {
+    margin-top: 6px;
+    font-family: "Inter", "Roboto", "Arial", "Tahoma", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    background-color: rgb(80, 185, 70);
+    border-color: rgb(80, 185, 70);
+  }
+}

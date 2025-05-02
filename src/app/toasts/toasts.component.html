@@ -1,0 +1,20 @@
+  <div
+    class="cd-toast"
+    [class.appear]="toastsService.isAppear"
+  >
+    <h2>Note</h2>
+
+    <div
+      *ngFor="let message of toastsService.messages"
+    >
+      <p class="cd-text">
+        {{message}}
+      </p>
+    </div>
+
+    <button
+      class="cd-btn cd-btn--secondary cd-toast__btn"
+      title="Закрыть"
+      (click)="toastsService.removeToast()"
+    >Apply</button>
+  </div>

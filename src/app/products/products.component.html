@@ -1,0 +1,31 @@
+  <div class="products-wrp">
+    <h1>{{ title }}</h1>
+
+    <div>
+      <ul class="cd-list products-list">
+        <li
+          *ngFor="let product of products; index as iproduct"
+          class="cd-list__item"
+        >
+          <article class="product">
+            <a
+              class="product__link-handler"
+              routerLink="/product/{{ product.id }}"
+            >
+              <img
+                class="product__preview"
+                [src]="'assets/goods' + (iproduct + 1) + '.jpg'"
+                width="48"
+                height="48"
+                alt="Product mini preview"
+              >
+              <header class="product__info">
+                <p class="product__id">ID: {{ product.id }}</p>
+                <h1 class="product__label">{{ product.name }}</h1>
+              </header>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
